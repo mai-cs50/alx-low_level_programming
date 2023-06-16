@@ -10,16 +10,19 @@
 
 int main(void)
 {
-	char upper, lower;
+	char lower = 'a';
+	char upper = 'A';
 
-	for (upper = 'a'; upper <= 'z'; upper++)
-	{
-		putchar(upper);
-	}
-	for (lower = 'A'; lower <= 'Z'; lower++)
+	while (lower <= 'z')
 	{
 		putchar(lower);
+		lower++;
 	}
-	printf("\n");
+	while (upper <= 'Z')
+	{
+		putchar(upper);
+		upper++;
+	}
+	putchar('\n');
 	return (0);
 }
