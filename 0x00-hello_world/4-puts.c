@@ -1,9 +1,11 @@
 #include <stdio.h>
 int main(void)
 /*
- *Description:printf function
+ * main - Enrty point
  *
- * return (0)
+ *Description: A C Program that [rints with puts function
+ *
+ *Return: Alawys 0 (Success)
 */
 {
 	puts("\"Programming is like building a multilingual puzzle");
