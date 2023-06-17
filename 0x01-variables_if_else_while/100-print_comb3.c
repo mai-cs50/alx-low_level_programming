@@ -15,7 +15,7 @@ int main(void)
 
 	while (x < 10)
 	{
-		for (y = 0; y < 10; y++);
+		for (y = 0; y < 10; y++)
 		{
 				if (y == x)
 				y++;
