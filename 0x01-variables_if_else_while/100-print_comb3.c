@@ -11,24 +11,17 @@
 int main(void)
 {
 	int x = 0;
-	int y = 0;
+	int y = 1;
 
-	while (x < 10)
+	for (x < 9; x++)
 	{
-		for (y < 10; y++;)
+		putchar(x);
+		if (y < 9)
 		{
-			if
-				(y == x);
-				y++;
-
-			putchar(x + '0');
-			putchar(y + '0');
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
-		x++;
 	}
 	putchar('\n');
-
 	return (0);
 }
