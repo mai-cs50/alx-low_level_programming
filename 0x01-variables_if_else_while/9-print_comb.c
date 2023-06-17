@@ -10,21 +10,15 @@
 
 int main(void)
 {
-	int x = 0;
-	int y;
+	int x = 48;
 
-	while (x < 10)
+	while (x < 58)
 	{
-		for (y = 0; y < 10; y++;);
+		putchar(x);
+		if (x < 57)
 		{
-			if
-				(y == x);
-				y++;
-
-			putchar(x + '0');
-			putchar(y + '0');
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
 		x++;
 	}

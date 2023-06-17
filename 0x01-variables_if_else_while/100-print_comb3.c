@@ -11,16 +11,22 @@
 int main(void)
 {
 	int x = 0;
-	int y = 1;
+	int y;
 
-	for (x < 9; x++)
+	while (x < 10)
 	{
-		putchar(x);
-		if (y < 9)
+		for (y = 0; y < 10; y++;);
 		{
-			putchar(44);
-			putchar(32);
+			if
+				(y == x);
+			y++;
+
+			putchar(x + '0');
+			putchar(y + '0');
+			putchar(',');
+			putchar(' ');
 		}
+		x++;
 	}
 	putchar('\n');
 	return (0);
