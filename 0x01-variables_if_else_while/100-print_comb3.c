@@ -15,7 +15,7 @@ int main(void)
 
 	while (x < 9)
 	{
-		for (y = 0; y < 10; y++)
+		for (y = 0; y < 9; y++)
 		{
 				while (y <= x)
 				y++;
@@ -27,6 +27,7 @@ int main(void)
 		}
 		x++;
 	}
+	putchar(y + '0');
 	putchar('\n');
 	return (0);
 }
