@@ -22,8 +22,9 @@ int main(void)
 
 			putchar(x + '0');
 			putchar(y + '0');
-			putchar(',');
-			putchar(' ');
+				if (x + y != 17)
+					putchar(',');
+					putchar(' ');
 		}
 		x++;
 	}
