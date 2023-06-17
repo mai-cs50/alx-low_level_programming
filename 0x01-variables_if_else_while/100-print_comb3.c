@@ -11,11 +11,10 @@
 int main(void)
 {
 	int x = 0;
-	int y;
+	int y = 0;
 
 	while (x < 9)
 	{
-		y = 0;
 		while (y < 10)
 		{
 			while (y <= x)
