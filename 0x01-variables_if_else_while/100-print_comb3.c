@@ -15,20 +15,20 @@ int main(void)
 
 	while (x < 9)
 	{
-		for (y = 0; y < 10; y++)
+		y = 0;
+		while (y < 10)
 		{
-				while (y <= x)
-				{
-					y++;
-				}
-
-			putchar(x + '0');
-			putchar(y + '0');
+			while (y <= x)
+			{
+				y++;
+				putchar(x + '0');
+				putchar(y + '0');
 				if (x + y != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
+			}
 		}
 		x++;
 	}
