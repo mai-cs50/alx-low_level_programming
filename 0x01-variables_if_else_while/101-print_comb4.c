@@ -22,9 +22,12 @@ int main(void)
 			{
 				y++;
 			}
-			while (z <= 10 && z <= x || z <= y)
+			while (z < 10 )
+				while (z <= y)
 			{
-				z++;
+				{
+					z++;
+				}
 			}
 
                         putchar(x + '0');
