@@ -17,7 +17,7 @@ int main(void)
 	{
 		for (y = 0; y < 10; y++);
 		{
-			if (y == x);
+			if (y == x)
 			y++;
 
 			putchar(x + '0');
