@@ -17,17 +17,18 @@ int main(void)
 	{
 		while (y < 10)
 		{
-			while (y <= x)
+			if (y <= x)
 			{
 				y++;
-				putchar(x + '0');
-				putchar(y + '0');
-				if (x + y != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
 			}
+			putchar(x + '0');
+			putchar(y + '0');
+			if (x + y != 17)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			y++;
 		}
 		x++;
 	}
