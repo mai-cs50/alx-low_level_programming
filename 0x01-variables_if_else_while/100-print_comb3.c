@@ -18,7 +18,9 @@ int main(void)
 		for (y = 0; y < 10; y++)
 		{
 				while (y <= x)
-				y++;
+				{
+					y++;
+				}
 
 			putchar(x + '0');
 			putchar(y + '0');
@@ -31,5 +33,6 @@ int main(void)
 		x++;
 	}
 	putchar('\n');
+
 	return (0);
 }
