@@ -27,6 +27,6 @@ int main(void)
 		}
 		x++;
 	}
-	putchar(y + '0');
+	putchar('\n');
 	return (0);
 }
