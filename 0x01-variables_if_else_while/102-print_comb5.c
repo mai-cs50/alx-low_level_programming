@@ -28,15 +28,15 @@ int main(void)
 
 				if (x != 99 || y != 99)
 				{
-					putchar(',')
-					putchar(' ')
+					putchar(',');
+					putchar(' ');
 				}
 			}
 			y++;
 		}
 		x++;
 	}
-	putchar('\n')
+	putchar('\n');
 
 	return (0);
 }
