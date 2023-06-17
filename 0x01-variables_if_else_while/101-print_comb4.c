@@ -10,40 +10,35 @@
 
 int main(void)
 {
-        int x = 0;
-        int y;
+	int x = 0;
+	int y;
 	int z;
 
 	while (x < 8)
 	{
 		y = 0;
-        	while (y < 9)
-        	{
-			while (y <= x)
-			{
-				y++;
-			}
+		while (y < 9)
+		{
 			z = 0;
-			while (z < 10 )
+			while (z <= 9)
 			{
-				while (z <= y)
+				if (x != y && x < y && y != z && y < z)
 				{
-					z++;
-				}
-				putchar(x + '0');
-				putchar(y + '0');
-				putchar(z + '0');
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(z + '0');
 					if (x + y + z != 24)
 					{
 						putchar(',');
 						putchar(' ');
 					}
+				}
 				z++;
 			}
+			y++;
 		}
-	}
-		y++;
 		x++;
+	}
 	putchar('\n');
 
 	return (0);
