@@ -23,7 +23,7 @@ int main(void)
 				y++;
 			}
 			while (z < 10 )
-			}
+			{
 				while (z <= y)
 				{
 					z++;
