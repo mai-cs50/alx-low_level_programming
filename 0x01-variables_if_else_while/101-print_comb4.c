@@ -27,21 +27,20 @@ int main(void)
 				while (z <= y)
 				{
 					z++;
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(z + '0');
+					if (x + y + z != 24)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
-
-                        putchar(x + '0');
-                        putchar(y + '0');
-			putchar(z + '0');
-			if (x + y != 24)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			y++;
 		}
-		x++;
+			y++;
 	}
+		x++;
 	putchar('\n');
 
 	return (0);
