@@ -10,33 +10,33 @@
 
 int main(void)
 {
-	int x = 0;
-	int y;
+	int firstDigit = 0, seconDigit;
 
-	while (x <= 99)
+	while (firstDigit <= 99)
 	{
-		x = y;
-		while (y <= 99)
+		seconDigit = firstDigit;
+		while (seconDigit <= 99)
 		{
-			if (y != x)
+			if (seconDigit != firstDigit)
 			{
-				putchar((x / 10) + '0');
-				putchar((x % 10) + '0');
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
 				putchar(' ');
-				putchar((y / 10) + '0');
-				putchar((y % 10) + '0');
+				putchar((seconDigit / 10) + 48);
+				putchar((seconDigit % 10) + 48);
 
-				if (x != 98 || y != 99)
+				if (firstDigit != 98 || seconDigit != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			y++;
+			seconDigit++;
 		}
-		x++;
+		firstDigit++;
 	}
 	putchar('\n');
 
 	return (0);
 }
+
