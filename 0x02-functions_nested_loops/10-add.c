@@ -5,7 +5,7 @@
  * @x: first
  * @y: second
  *
- * Rturn: sum of x and y
+ * Return: sum of x and y
  *
 */
 int add(int x, int y)
