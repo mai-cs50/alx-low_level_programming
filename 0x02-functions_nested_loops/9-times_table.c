@@ -16,12 +16,10 @@ void times_table(void)
 			{
 				_putchar((multi / 10) + '0');
 			}
-			_putchar((multi % 10) + '0');
+			else
+				_putchar(' ');
+				_putchar((multi % 10) + '0');
 
-				if (y == 9)
-				{
-					_putchar('$');
-				}
 
 			_putchar(',');
 			_putchar(' ');
