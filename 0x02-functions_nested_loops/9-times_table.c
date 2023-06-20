@@ -12,7 +12,7 @@ void times_table(void)
 		for (y = 0; y <= 9; y++)
 		{
 			multi = x * y;
-			_putchar('multi');
+			_putchar(multi + '0');
 				while (y = 9)
 				{
 					_putchar('$');
