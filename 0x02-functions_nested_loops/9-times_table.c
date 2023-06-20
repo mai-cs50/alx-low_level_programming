@@ -21,8 +21,11 @@ void times_table(void)
 				_putchar((multi / 10) + '0');
 			}
 			_putchar((multi % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
+			if (y < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
