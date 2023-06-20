@@ -15,9 +15,9 @@ void times_table(void)
 			if (multi > 9)
 			{
 				_putchar((multi / 10) + '0');
-				_putchar((multi % 10) + '0');
 			}
-			_putchar(multi + 48);
+			_putchar((multi % 10) + '0');
+
 				if (y == 9)
 				{
 					_putchar('$');
