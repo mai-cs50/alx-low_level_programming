@@ -12,16 +12,15 @@ void times_table(void)
 		for (y = 0; y <= 9; y++)
 		{
 			multi = x * y;
-			if (multi > 9)
+			if (multi <= 9)
 			{
-				_putchar((multi / 10) + '0');
+				_putchar(' ');
 			}
 			else
 			{
-				_putchar(' ');
-				_putchar((multi % 10) + '0');
+				_putchar((multi / 10) + '0');
 			}
-
+			_putchar((multi % 10) + '0');
 			_putchar(',');
 			_putchar(' ');
 		}
