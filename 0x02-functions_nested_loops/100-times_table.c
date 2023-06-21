@@ -1,18 +1,15 @@
 #include "main.h"
 /**
+ * print_times_table - prints time table of n
  *
- *
- *
- *
- *
- *
+ * @n: takes number input
  *
 */
 void print_times_table(int n)
 {
 	int x, y, multi;
 
-	if (n <= 10 && n >= 0)
+	if (n <= 15 && n >= 0)
 	{
 		for (x = 0; x <= n; x++)
 		{
