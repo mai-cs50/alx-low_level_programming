@@ -12,7 +12,7 @@ void print_times_table(int n)
 {
 	int x, y, multi;
 
-	if (n <= 10; n >= 0)
+	if (n <= 10 && n >= 0)
 	{
 		_putchar('0');
 		_putchar(',');
