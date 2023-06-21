@@ -21,6 +21,15 @@ int numlength(int num)
 	}
 	return (length);
 }
+
+/**
+ * main - Entry point
+ *
+ * Description: print
+ *
+ * Return: 0 (success)
+ *
+*/
 int main(void)
 {
 	int count, initia10s;
