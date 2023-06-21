@@ -12,12 +12,13 @@ void print_times_table(int n)
 {
 	int x, y, multi;
 
-	for (n = 0; n <= 15; n++)
+	if (n = 0; n <= 15; n++)
 	{
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
-		for (y = 1; y <= 9; y++)
+		for (x = 1; x <= n; x++)
+		for (y = 1; y <= n; y++)
 		{
 			multi = x * y;
 			if (multi <= 9)
