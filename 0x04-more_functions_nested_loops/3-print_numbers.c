@@ -7,7 +7,7 @@
 */
 void print_numbers(void)
 {
-	int num;
+	int num = 0;
 
 	if (num >= 0 && num <= 9)
 	{
