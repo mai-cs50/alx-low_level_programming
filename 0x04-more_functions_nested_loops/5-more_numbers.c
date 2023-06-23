@@ -19,8 +19,10 @@ void more_numbers(void)
 				_putchar(1 + 48);
 				num = y % 10;
 			}
-
-			_putchar(num + 48);
+			if (y <= 9)
+			{
+				_putchar(num + 48);
+			}
 		}
 		putchar('\n');
 	}
