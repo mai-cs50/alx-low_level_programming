@@ -1,4 +1,4 @@
-#include "main.h0"
+#include "main.h"
 /**
  * more_numbers - print 0 - 14
  *
