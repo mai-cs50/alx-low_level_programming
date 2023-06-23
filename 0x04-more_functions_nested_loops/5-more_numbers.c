@@ -12,8 +12,8 @@ void more_numbers(void)
 	for (x = 1; x <= 10; x++)
 	{
 		for (y = 0; y <= 14; y++)
-			num = y;
 		{
+			num = y;
 			if (y > 9)
 			{
 				_putchar(1 + 48);
