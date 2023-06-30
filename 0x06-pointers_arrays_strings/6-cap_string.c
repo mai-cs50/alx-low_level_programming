@@ -7,7 +7,6 @@
  *
  * Return: 1 or 0
  *
- *
 */
 int islower(char c)
 {
@@ -20,7 +19,6 @@ int islower(char c)
  * @c: char
  *
  * Return: 1 or 0
- *
  *
 */
 
@@ -61,7 +59,7 @@ char *cap_string(char *s)
 		}
 		else
 			foundDelimit = 0;
-		s++
+		s++;
 	}
 	return (ptr);
 }
