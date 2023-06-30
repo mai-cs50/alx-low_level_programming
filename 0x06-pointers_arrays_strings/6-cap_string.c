@@ -28,7 +28,7 @@ int isDelimiter(char c)
 
 	char delimiter[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 		if (c == delimiter[i])
 			return (1);
 	return (0);
@@ -50,7 +50,7 @@ char *cap_string(char *s)
 
 	while (*s)
 	{
-		if (isDelomiter(*s))
+		if (isDelimiter(*s))
 			foundDelimit = 1;
 		else if (islower(*s) && foundDelimit)
 		{
