@@ -22,7 +22,7 @@ int _square_recursion(int n)
 */
 int square(int n, int val)
 {
-	if (val * val == 0)
+	if (val * val == n)
 		return (val);
 	else if (val * val < n)
 		return (square (n, val + 1));
