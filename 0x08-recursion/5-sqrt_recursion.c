@@ -7,7 +7,7 @@
  * Return: 0
  *
 */
-int squar(int n, int val);
+int square(int n, int val);
 int _square_recursion(int n)
 {
 	return (square(n, 1));
@@ -20,7 +20,7 @@ int _square_recursion(int n)
  *
  * Return: 0
 */
-int squar(int n, int val)
+int square(int n, int val)
 {
 	if (val * val == 0)
 		return (val);
