@@ -3,6 +3,7 @@
  * _sqrt_recursion - returns the natural square root of a number
  *
  * @n: int
+ * @val: int
  *
  * Return: 0
  *
@@ -25,7 +26,7 @@ int square(int n, int val)
 	if (val * val == n)
 		return (val);
 	else if (val * val < n)
-		return (square (n, val + 1));
+		return (square(n, val + 1));
 	else
 		return (-1);
 }
