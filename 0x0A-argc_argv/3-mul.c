@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 		sum = atoi(argv[1] * atoi(argv[2]));
 		printf("%d\n", sum);
 	}
-	else {
+	else
+	{
 		printf("error\n");
 		return (1);
 	}
