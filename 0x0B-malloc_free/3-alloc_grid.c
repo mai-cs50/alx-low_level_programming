@@ -10,4 +10,17 @@
 */
 int **alloc_grid(int width, int height)
 {
+	int **tab, i, j;
+
+	tab = malloc(sizeof(*tab) * height);
+
+	if (width <= 0 || height <= 0 || tab == 0)
+	{
+		return (NULL);
+	}
+	else
+	{
+		for (i = 0;)
+	}
+
 }
