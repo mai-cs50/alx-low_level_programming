@@ -21,7 +21,7 @@ int _strlen(char *s)
  * @s1: char
  * @s2: char
  *
- * Reurn: 0
+ * Return: 0
  *
 */
 char *str_concat(char *s1, char *s2)
