@@ -2,8 +2,10 @@
 /**
  * *_memset - allocates memory for an array, using malloc
  *
- * @nmemb: int
- * @size: int
+ * @s: char
+ * @b: char
+ *
+ * @n: int
  *
  * Return: 0
  *
