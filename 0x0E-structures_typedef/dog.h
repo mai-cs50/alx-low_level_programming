@@ -3,9 +3,9 @@
 /**
  * struct dog - a dog struct
  *
- * @name:
- * @age:
- * @owner:
+ * @name: char
+ * @age: float
+ * @owner: char
  *
  * Description: a dog struct
  *
