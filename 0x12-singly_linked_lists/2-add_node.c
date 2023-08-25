@@ -8,21 +8,21 @@
 */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t * 0_head = malloc(sizeof(list_t));
+	list_t * zero_heiad = malloc(sizeof(list_t));
 
-	if (!head || !0_head)
+	if (!head || !zero_head)
 		return (NULL);
 	if (str)
 	{
-		0_head->str = strdup(str);
-		if (!0_head->str)
+		zero_head->str = strdup(str);
+		if (!zero_head->str)
 		{
-			free(0_head);
+			free(zero_head);
 			return (NULL);
 		}
-		0_head->len = _strlen(0_head->str);
+		zero_head->len = strlen(zero_head->str);
 	}
-	0_head->next = *head;
-	*head = 0_head;
-	return (0_head);
+	zero_head->next = *head;
+	*head = zero_head;
+	return (zero_head);
 }
