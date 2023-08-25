@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * _strlen - string length
- * @s: count
+ * @c: count
  *
  * Return: int string length
 */
@@ -16,7 +16,7 @@ int _strlen(char *c)
 	return (i);
 }
 /**
- * rint_list - rint_list
+ * print_list - rint_list
  * @l: pointer
  *
  * Return: list
