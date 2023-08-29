@@ -5,6 +5,7 @@
  * _r - array
  * @list: old list
  * @size: new list
+ * @new: new node
  *
  * Return: pointer
 */
