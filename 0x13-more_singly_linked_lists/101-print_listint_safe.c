@@ -2,18 +2,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * -r - array
+ * _r - array
  * @list: old list
  * @size: new list
  *
  * Return: pointer
 */
-const listint_t **-r(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 {
 	const listint_t **new_list;
 	size_t i;
 
-	new_list = malloc(size *sizeof(listint_t *));
+	new_list = malloc(size * sizeof(listint_t *));
 	if (new_list == NULL)
 	{
 		free(list);
@@ -38,18 +38,18 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (head != NULL)
 	{
-		for (i = 0, i < sum, i++)
+		for (i = 0, i < num, i++)
 		{
 			if (head == list[i])
 			{
-				printf ("-> [%p] %d\n", (void *)head, head->n);
+				printf("-> [%p] %d\n", (void *)head, head->n);
 				free(list);
 				return (num);
 			}
 		}
 		num++;
-		list = -r(list, num, head);
-		printf ("[%p] %d\n", (void *)head, head->n);
+		list = _r(list, num, head);
+		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
 	free(list);
