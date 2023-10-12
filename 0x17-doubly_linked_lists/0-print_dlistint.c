@@ -4,7 +4,7 @@
  * print_dlistint - prints all the elements of a dlistint_t list
  * @h: adress of head node
  *
- * Retrun: size of list
+ * Return: size of list
 */
 size_t print_dlistint(const dlistint_t *h)
 {
@@ -12,7 +12,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (h)
 	{
-		printf ("%d\n", h->n);
+		printf("%d\n", h->n);
 		h = h->next;
 		i++;
 	}
