@@ -6,7 +6,7 @@
  * @value: target value
  * Return: Always EXIT_SUCCESS
  */
-int binary_search(int *array, size_t size, int value)
+void print_array(int *array, int l, int r)
 {
 	int i;
 
@@ -27,7 +27,7 @@ int binary_search(int *array, size_t size, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int l = 0, r = size - 1, m
+	int l = 0, r = size - 1, m;
 
 	if (!array || size == 0)
                 return (-1);
