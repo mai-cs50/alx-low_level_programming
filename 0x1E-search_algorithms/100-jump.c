@@ -30,7 +30,5 @@ int jump_search(int *array, size_t size, int value)
 			return (prev);
 		prev++;
 	}
-	return (-1)
-
-	for (i = l; i <= r; i
+	return (-1);
 }
