@@ -8,8 +8,9 @@
  */
 void print_number(int n)
 {
-    unsigned int num;  /* Using unsigned to handle the number without negative sign */
-    
+    unsigned int num;
+    unsigned int divisor;
+
     /* Handle negative numbers */
     if (n < 0)
     {
@@ -29,9 +30,18 @@ void print_number(int n)
     }
 
     /* Calculate the divisor to get the most significant digit */
-    unsigned int divisor = 1;
+    divisor = 1;
     while (num / divisor >= 10)
     {
         divisor *= 10;
-  
+    }
+
+    /* Extract and print each digit */
+    while (divisor > 0)
+    {
+        _putchar((num / divisor) + '0');  /* Convert digit to character */
+        num %= divisor;                   /* Remove the printed digit */
+        divisor /= 10;                    /* Move to the next digit */
+    }
+}
 
