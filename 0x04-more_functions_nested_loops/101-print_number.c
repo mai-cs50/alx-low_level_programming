@@ -8,29 +8,30 @@
  */
 void print_number(int n)
 {
-    int divisor = 1;
-    int digit;
-
+    unsigned int num;  /* Using unsigned to handle the number without negative sign */
+    
     /* Handle negative numbers */
     if (n < 0)
     {
         _putchar('-');
-        n = -n;
+        num = -n;  /* Convert n to positive */
+    }
+    else
+    {
+        num = n;  /* Use num directly if n is non-negative */
     }
 
-    /* Find the divisor to extract the leftmost digit */
-    while (n / divisor >= 10)
+    /* Handle special case for zero */
+    if (num == 0)
+    {
+        _putchar('0');
+        return;
+    }
+
+    /* Calculate the divisor to get the most significant digit */
+    unsigned int divisor = 1;
+    while (num / divisor >= 10)
     {
         divisor *= 10;
-    }
-
-    /* Extract and print each digit */
-    while (divisor > 0)
-    {
-        digit = n / divisor;
-        _putchar(digit + '0');  /* Convert digit to character */
-        n %= divisor;           /* Remove the printed digit */
-        divisor /= 10;          /* Move to the next digit */
-    }
-}
+  
 
