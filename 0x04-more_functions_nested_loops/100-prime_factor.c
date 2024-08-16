@@ -4,6 +4,9 @@
 /**
  * largest_prime_factor - prints the largest prime factor of a number
  *
+ * Description: The function finds and prints the largest prime factor
+ * of the number 612852475143.
+ *
  * Return: void
  */
 void largest_prime_factor(void)
@@ -12,14 +15,14 @@ void largest_prime_factor(void)
     long max_prime = -1;
     long i;
 
-    // Divide number by 2 until it is no longer divisible
+    /* Divide number by 2 until it is no longer divisible */
     while (number % 2 == 0)
     {
         max_prime = 2;
         number /= 2;
     }
 
-    // Check for odd factors from 3 onwards
+    /* Check for odd factors from 3 onwards */
     for (i = 3; i <= sqrt(number); i += 2)
     {
         while (number % i == 0)
@@ -29,7 +32,7 @@ void largest_prime_factor(void)
         }
     }
 
-    // If the number is a prime number greater than 2
+    /* If the number is a prime number greater than 2 */
     if (number > 2)
     {
         max_prime = number;
@@ -38,6 +41,14 @@ void largest_prime_factor(void)
     printf("%ld\n", max_prime);
 }
 
+/**
+ * main - entry point of the program
+ *
+ * Description: Calls the function to print the largest prime factor
+ * of the number 612852475143.
+ *
+ * Return: 0 on success
+ */
 int main(void)
 {
     largest_prime_factor();
