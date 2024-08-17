@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - يقوم بضرب عددين
- * @argc: عدد المعطيات
- * @argv: قائمة المعطيات
+ * main - multiplies two numbers.
+ * @argc: inputs
+ * @argv: list of inputs
  *
- * Return: 0 إذا كانت العملية ناجحة، 1 إذا كان هناك خطأ
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
