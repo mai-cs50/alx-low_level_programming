@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
     int num1, num2;
     int (*operation)(int, int);
+    char *op;
 
     /* Check for correct number of arguments */
     if (argc != 4)
@@ -22,23 +23,18 @@ int main(int argc, char *argv[])
     /* Convert arguments to integers */
     num1 = atoi(argv[1]);
     num2 = atoi(argv[3]);
+    op = argv[2];
 
     /* Get the function for the operator */
-    operation = get_op_func(argv[2]);
+    operation = get_op_func(op);
 
     /* Check if the operator is valid and not null */
-    if (operation == NULL)
+    if (operation == NULL || (strcmp(op, "/") == 0 && num2 == 0) || (strcmp(op, "%") == 0 && num2 == 0))
     {
         printf("Error\n");
         return (1);
     }
 
-    /* Check for division or modulo by zero */
-    if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && num2 == 0)
-    {
-        printf("Error\n");
-        return (1);
-    }
 
     /* Perform the operation and print the result */
     printf("%d\n", operation(num1, num2));
