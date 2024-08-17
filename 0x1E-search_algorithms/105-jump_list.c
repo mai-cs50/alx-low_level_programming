@@ -12,40 +12,48 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t index, k, m;
-	listint_t *prev;
+    size_t step, prev_index, curr_index;
+    listint_t *prev, *curr;
 
-	if (list == NULL || size == 0)
-		return (NULL);
+    if (list == NULL || size == 0)
+        return (NULL);
 
-	m = (size_t)sqrt((double)size);
-	index = 0;
-	k = 0;
+    /* Calculate the jump step size */
+    step = (size_t)sqrt((double)size);
 
-	do {
-		prev = list;
-		k++;
-		index = k * m;
+    /* Initialize pointers */
+    prev = list;
+    curr = list;
+    curr_index = 0;
 
-		while (list->next && list->index < index)
-			list = list->next;
+    /* Jump through the list */
+    while (curr->next && curr_index < size && curr->n < value)
+    {
+        prev = curr;
+        curr_index = curr->index;  // Assumes list nodes have an 'index' field
+        
+        /* Move curr forward by step size */
+        for (size_t i = 0; i < step && curr->next; i++)
+        {
+            curr = curr->next;
+            curr_index = curr->index;
+        }
 
-		if (list->next == NULL && index != list->index)
-			index = list->index;
+        printf("Value checked at index [%lu] = [%d]\n", curr_index, curr->n);
 
-		printf("Value checked at index [%d] = [%d]\n", (int)index, list->n);
+        if (curr_index >= size || curr->n >= value)
+            break;
+    }
 
-	} while (index < size && list->next && list->n < value);
+    printf("Value found between indexes [%lu] and [%lu]\n", prev->index, curr->index);
 
-	printf("Value found between indexes ");
-	printf("[%d] and [%d]\n", (int)prev->index, (int)list->index);
+    /* Linear search within the block */
+    for (; prev && prev->index <= curr->index; prev = prev->next)
+    {
+        printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
+        if (prev->n == value)
+            return (prev);
+    }
 
-	for (; prev && prev->index <= list->index; prev = prev->next)
-	{
-		printf("Value checked at index [%d] = [%d]\n", (int)prev->index, prev->n);
-		if (prev->n == value)
-			return (prev);
-	}
-
-	return (NULL);
+    return (NULL);
 }
