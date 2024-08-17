@@ -1,5 +1,4 @@
 #include "3-calc.h"
-#include "3-get_op_func.h"
 
 /**
  * main - Entry point for a simple calculator program.
@@ -24,24 +23,16 @@ int main(int argc, char *argv[])
     op = argv[2][0];
     num2 = atoi(argv[3]);
 
-    if (op == '+' || op == '-' || op == '*' || op == '/' || op == '%')
+    if ((op == '+' || op == '-' || op == '*' || op == '/' || op == '%') &&
+        (operation = get_op_func(argv[2])) != NULL)
     {
-        operation = get_op_func(argv[2]);
-        if (operation != NULL)
+        if ((op == '/' && num2 == 0) || (op == '%' && num2 == 0))
         {
-            if (op == '/' && num2 == 0)
-            {
-                printf("Error\n");
-                return (1);
-            }
-            if (op == '%' && num2 == 0)
-            {
-                printf("Error\n");
-                return (1);
-            }
-            printf("%d\n", operation(num1, num2));
-            return (0);
+            printf("Error\n");
+            return (1);
         }
+        printf("%d\n", operation(num1, num2));
+        return (0);
     }
     printf("Error\n");
     return (1);

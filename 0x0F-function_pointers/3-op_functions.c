@@ -1,61 +1,72 @@
 #include "3-calc.h"
 
 /**
- * op_add - calculates the sum of two integers
- * @a: first integer
- * @b: second integer
+ * op_add - Adds two numbers.
+ * @a: The first number.
+ * @b: The second number.
  *
- * Return: sum of a and b
+ * Return: The sum of the two numbers.
  */
 int op_add(int a, int b)
 {
-	return (a + b);
+    return (a + b);
 }
 
 /**
- * op_sub - calculates the difference of two integers
- * @a: first integer
- * @b: second integer
+ * op_sub - Subtracts the second number from the first number.
+ * @a: The first number.
+ * @b: The second number.
  *
- * Return: difference of a and b
+ * Return: The difference between the two numbers.
  */
 int op_sub(int a, int b)
 {
-	return (a - b);
+    return (a - b);
 }
 
 /**
- * op_mul - calculates the product of two integers
- * @a: first integer
- * @b: second integer
+ * op_mul - Multiplies two numbers.
+ * @a: The first number.
+ * @b: The second number.
  *
- * Return: product of a and b
+ * Return: The product of the two numbers.
  */
 int op_mul(int a, int b)
 {
-	return (a * b);
+    return (a * b);
 }
 
 /**
- * op_div - calculates the division of two integers
- * @a: first integer
- * @b: second integer
+ * op_div - Divides the first number by the second number.
+ * @a: The first number.
+ * @b: The second number.
  *
- * Return: result of the division of a and b
+ * Return: The quotient of the two numbers.
  */
 int op_div(int a, int b)
 {
-	return (a / b);
+    if (b == 0)
+    {
+        printf("Error\n");
+        exit(100);
+    }
+    return (a / b);
 }
 
 /**
- * op_mod - calculates the remainder of the division of two integers
- * @a: first integer
- * @b: second integer
+ * op_mod - Calculates the remainder of the division of the first number by the second number.
+ * @a: The first number.
+ * @b: The second number.
  *
- * Return: remainder of a divided b
+ * Return: The remainder of the division.
  */
 int op_mod(int a, int b)
 {
-	return (a % b);
+    if (b == 0)
+    {
+        printf("Error\n");
+        exit(100);
+    }
+    return (a % b);
 }
+
