@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "3-calc.h"
 #include "3-get_op_func.h"
 
@@ -31,6 +29,16 @@ int main(int argc, char *argv[])
         operation = get_op_func(argv[2]);
         if (operation != NULL)
         {
+            if (op == '/' && num2 == 0)
+            {
+                printf("Error\n");
+                return (1);
+            }
+            if (op == '%' && num2 == 0)
+            {
+                printf("Error\n");
+                return (1);
+            }
             printf("%d\n", operation(num1, num2));
             return (0);
         }

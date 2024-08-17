@@ -10,17 +10,15 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	
-	if (*s == '+')
-		return (op_add);
-	if (*s == '-')
-		return (op_sub);
-	if (*s == '*')
-		return (op_mul);
-	if (*s == '/')
-		return (op_div);
-	if (*s == '%')
-		return (op_mod);
-	return (NULL);
-
+    if (strcmp(s, "+") == 0)
+        return (op_add);
+    if (strcmp(s, "-") == 0)
+        return (op_sub);
+    if (strcmp(s, "*") == 0)
+        return (op_mul);
+    if (strcmp(s, "/") == 0)
+        return (op_div);
+    if (strcmp(s, "%") == 0)
+        return (op_mod);
+    return (NULL);
 }
