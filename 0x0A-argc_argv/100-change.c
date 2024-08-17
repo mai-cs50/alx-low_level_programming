@@ -16,6 +16,12 @@ int main(int argc, char *argv[])
 		int i, lc = 0, money = atoi(argv[1]);
 		int c[] = {25, 10, 5, 2, 1};
 
+		if (money < 0)
+		{
+			printf("0\n");
+			return(0);
+		}
+
 		for (i = 0; i < 5; i++)
 		{
 			lc += money / c[i];
