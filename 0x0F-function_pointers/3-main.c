@@ -10,31 +10,38 @@
 int main(int argc, char *argv[])
 {
     int num1, num2;
-    char op;
     int (*operation)(int, int);
 
+    /* Check for correct number of arguments */
     if (argc != 4)
     {
         printf("Error\n");
         return (1);
     }
 
+    /* Convert arguments to integers */
     num1 = atoi(argv[1]);
-    op = argv[2][0];
     num2 = atoi(argv[3]);
 
-    if ((op == '+' || op == '-' || op == '*' || op == '/' || op == '%') &&
-        (operation = get_op_func(argv[2])) != NULL)
+    /* Get the function for the operator */
+    operation = get_op_func(argv[2]);
+
+    /* Check if the operator is valid and not null */
+    if (operation == NULL)
     {
-        if ((op == '/' && num2 == 0) || (op == '%' && num2 == 0))
-        {
-            printf("Error\n");
-            return (1);
-        }
-        printf("%d\n", operation(num1, num2));
-        return (0);
+        printf("Error\n");
+        return (1);
     }
-    printf("Error\n");
-    return (1);
+
+    /* Check for division or modulo by zero */
+    if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && num2 == 0)
+    {
+        printf("Error\n");
+        return (1);
+    }
+
+    /* Perform the operation and print the result */
+    printf("%d\n", operation(num1, num2));
+    return (0);
 }
 
